@@ -1,13 +1,26 @@
-﻿alert("Seja bem-vindo ao nosso jogo!");
+alert("Bem-vindo ao Jogo da Média!");
+  let quantidade = prompt("Quantos números você quer digitar?");
+  quantidade = Number(quantidade);
+  if (quantidade <= 0 || quantidade === null || quantidade === "" || typeof quantidade !== "number") {
+    alert("Quantidade inválida. Tente novamente com um número maior que zero.");
+  } else {
+    let soma = 0;
 
-let qtd;
-qtd = prompt("Digite um numero pra fazer a media: ");
+    for (let i = 1; i <= quantidade; i++) {
+      let entrada = prompt(`Digite o ${i}º número:`);
+      let numero = Number(entrada);
 
-let i;
-let soma = 0;
-for (i = 1; i <= qtd; i++) {
-  soma = soma + i;
+      if (entrada.trim() === "" || entrada === null || isNaN(numero)) {
+        alert("Valor inválido. Digite um número.");
+        i--;
+        continue;
+      }
+
+      soma += numero;
+    }
+
+    let media = soma / quantidade;
+
+    alert(`A média calculada entre os ${quantidade} números digitados é: ${media.toFixed(2)}`);
+  }
 }
-let media = soma / qtd;
-
-alert(`Sua média é: ${media}`);
