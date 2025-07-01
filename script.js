@@ -1,5 +1,4 @@
-function iniciarJogoMedia() {
-  alert("Bem-vindo ao Jogo da Média!");
+alert("Bem-vindo ao Jogo da Média!");
   let quantidade = prompt("Quantos números você quer digitar?");
   quantidade = Number(quantidade);
   if (quantidade <= 0 || quantidade === null || quantidade === "" || typeof quantidade !== "number") {
@@ -24,4 +23,3 @@ function iniciarJogoMedia() {
 
     alert(`A média calculada entre os ${quantidade} números digitados é: ${media.toFixed(2)}`);
   }
-}
