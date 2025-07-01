@@ -1,4 +1,4 @@
-alert("Bem-vindo ao Jogo da média");
+alert("Bem-vindo ao Jogo da Média");
 let qtdNum = parseInt(prompt("Quantos números você gostaria de usar para calcular a média?"));
 let soma = 0;
 
