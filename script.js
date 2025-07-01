@@ -1,4 +1,5 @@
-alert("Bem-vindo ao Jogo da Média!");
+function iniciarJogoMedia() {
+  alert("Bem-vindo ao Jogo da Média!");
   let quantidade = prompt("Quantos números você quer digitar?");
   quantidade = Number(quantidade);
   if (quantidade <= 0 || quantidade === null || quantidade === "" || typeof quantidade !== "number") {
